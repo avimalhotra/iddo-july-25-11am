@@ -26,7 +26,8 @@ html{
     font-size: 15px; 
     --red:#ca3c3c; 
     --ff:proxima, san-serif;
- }
+}
+
 body{ font: 16px var(--ff)}
 
 .container{ max-width: 1200px; margin: auto; padding: 0 1rem;}
@@ -46,6 +47,7 @@ body{ font: 16px var(--ff)}
 .flex{ display: flex;}
 .justify-space-bet{ justify-content: space-between;}
 .align-center{ align-items: center;}
+.gap-y-4{ row-gap: 4rem;}
 
 
 /* custom code */
@@ -59,19 +61,24 @@ nav a{ line-height: 80px; display: block; padding: 0 1rem; }
 .btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font-size: 16px; font-family: var(--ff);}
 
 
+.banner{ background: #666; color: #fff; padding: 20rem 0;}
+.banner button{ background: none; border: none; font-size: 10rem; color: inherit; margin-right: 40px;}
+.banner p{ font: 100 60px var(--ff)}
+.banner a{ color: var(--red);}
 
 
 
-
-
-
-
-
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+h2{ font: 700 72px/60px var(--ff); border-bottom: 10px solid; }
+.circle{ width: 100px; height: 100px; border: 2px solid; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; font-size: 36px; margin-right: 2rem;}
+.wrap-3 h3{ font-size: 16px; margin-bottom: 10px; }
+.wrap-3 p{ font: 100 14px/22px var(--ff) }
 
 
 /* responsive */
 @media screen and (max-width:1220px){
     html{ font-size: 13px;}
+    h2{ font-size: 62px;}
 }
 
 @media screen and (max-width:980px){
@@ -87,9 +94,14 @@ nav a{ line-height: 80px; display: block; padding: 0 1rem; }
     .col-t-10{ grid-column: span 10;}
     .col-t-11{ grid-column: span 11;}
     .col-t-12{ grid-column: span 12;} 
+    .banner p{ font-size: 42px;}
+    
 }
 @media screen and (max-width:787px){
     html{ font-size: 12px;}
+    .collapse{ display: none;}
+    .col-m-6{ grid-column: span 6;}
+    .banner p{ font-size: 32px;}
 }
 @media screen and (max-width:460px){
     .col-p-1{ grid-column: span 1;}
@@ -104,4 +116,5 @@ nav a{ line-height: 80px; display: block; padding: 0 1rem; }
     .col-p-10{ grid-column: span 10;}
     .col-p-11{ grid-column: span 11;}
     .col-p-12{ grid-column: span 12;}
+    .banner .flex{ flex-flow: column wrap;}
 }
